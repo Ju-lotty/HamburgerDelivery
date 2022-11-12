@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.Home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mainTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Hamburger"
+            android:textColor="#F89E45"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic"
+            app:layout_constraintBottom_toBottomOf="@id/mainTextView"
+            app:layout_constraintStart_toEndOf="@id/mainTextView"
+            app:layout_constraintTop_toTopOf="@id/mainTextView"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="#00000000"
+            android:src="@drawable/ic_bell"
+            app:layout_constraintBottom_toBottomOf="@id/mainTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mainTextView"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/introduceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="You can Login \nEnjoy happiness."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/mainTextView"
+            app:layout_constraintTop_toBottomOf="@id/mainTextView"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="90dp"
+            android:background="@drawable/view2"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/introduceTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/introduceTextView"
+            app:layout_constraintTop_toTopOf="@id/introduceTextView"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/introduceTextView">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/viewflipper_1"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/viewflipper_2"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:src="@drawable/viewflipper_3"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:src="@drawable/viewflipper_4"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/viewflipper_5"
+                tools:ignore="ContentDescription" />
+        </ViewFlipper>
+
+        <ImageButton
+            android:id="@+id/deliveryButton"
+            android:layout_width="165dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            android:src="@drawable/ic_delivery"
+            app:layout_constraintEnd_toStartOf="@id/forHereButton"
+            app:layout_constraintStart_toStartOf="@id/viewFlipper"
+            app:layout_constraintTop_toBottomOf="@id/viewFlipper" />
+
+        <ImageButton
+            android:id="@+id/forHereButton"
+            android:layout_width="165dp"
+            android:layout_height="160dp"
+            android:elevation="10dp"
+            android:src="@drawable/ic_forhere"
+            app:layout_constraintEnd_toEndOf="@id/viewFlipper"
+            app:layout_constraintStart_toEndOf="@id/deliveryButton"
+            app:layout_constraintTop_toBottomOf="@id/viewFlipper"
+            app:layout_constraintTop_toTopOf="@id/deliveryButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
