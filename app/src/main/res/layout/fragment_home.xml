@@ -86,7 +86,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="800dp"
+            android:layout_height="900dp"
             android:layout_marginTop="120dp"
             android:background="@drawable/view"
             app:layout_constraintEnd_toEndOf="parent"
@@ -142,7 +142,8 @@
             android:src="@drawable/ic_delivery"
             app:layout_constraintEnd_toStartOf="@id/forHereButton"
             app:layout_constraintStart_toStartOf="@id/viewFlipper"
-            app:layout_constraintTop_toBottomOf="@id/viewFlipper" />
+            app:layout_constraintTop_toBottomOf="@id/viewFlipper"
+            tools:ignore="ContentDescription" />
 
         <ImageButton
             android:id="@+id/forHereButton"
@@ -153,6 +154,59 @@
             app:layout_constraintEnd_toEndOf="@id/viewFlipper"
             app:layout_constraintStart_toEndOf="@id/deliveryButton"
             app:layout_constraintTop_toBottomOf="@id/viewFlipper"
-            app:layout_constraintTop_toTopOf="@id/deliveryButton" />
+            app:layout_constraintTop_toTopOf="@id/deliveryButton"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/menuTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Menu"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/viewFlipper"
+            app:layout_constraintTop_toBottomOf="@id/deliveryButton"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:elevation="5dp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintEnd_toEndOf="@id/forHereButton"
+            app:layout_constraintStart_toStartOf="@id/deliveryButton"
+            app:layout_constraintTop_toBottomOf="@id/menuTextView"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Location"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/viewFlipper"
+            app:layout_constraintTop_toBottomOf="@id/menuButton"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:elevation="5dp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintEnd_toEndOf="@id/forHereButton"
+            app:layout_constraintStart_toStartOf="@id/deliveryButton"
+            app:layout_constraintTop_toBottomOf="@id/locationTextView"
+            tools:ignore="ContentDescription" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
