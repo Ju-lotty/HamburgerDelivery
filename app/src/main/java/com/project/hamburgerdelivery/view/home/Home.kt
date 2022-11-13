@@ -1,4 +1,4 @@
-package com.project.hamburgerdelivery.view
+package com.project.hamburgerdelivery.view.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,7 +13,7 @@ class Home : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater)
         return binding.root
     }
@@ -21,11 +21,36 @@ class Home : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewFlipper()
+        alarmButton()
+        menuButton()
+        locationButton()
     }
+
+    private fun alarmButton() = with(binding) {
+        val alarm = Alarm()
+        alarmButton.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, alarm).commit()
+        }
+    }
+
     private fun viewFlipper() = with(binding) {
         viewFlipper.startFlipping()
-        viewFlipper.flipInterval = 5000
+        viewFlipper.flipInterval = 4000
         viewFlipper.setInAnimation(activity?.applicationContext, android.R.anim.fade_in)
         viewFlipper.setOutAnimation(activity?.applicationContext, android.R.anim.fade_out)
+    }
+
+    private fun menuButton() = with(binding){
+        val menu = Menu()
+        menuButton.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, menu).commit()
+        }
+    }
+
+    private fun locationButton() = with(binding){
+        val location = Location()
+        locationButton.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, location).commit()
+        }
     }
 }

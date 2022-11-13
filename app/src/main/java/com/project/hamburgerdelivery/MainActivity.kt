@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import com.project.hamburgerdelivery.databinding.ActivityMainBinding
 import com.project.hamburgerdelivery.view.Event
 import com.project.hamburgerdelivery.view.History
-import com.project.hamburgerdelivery.view.Home
+import com.project.hamburgerdelivery.view.home.Home
 import com.project.hamburgerdelivery.view.Information
 
 class MainActivity : AppCompatActivity(){

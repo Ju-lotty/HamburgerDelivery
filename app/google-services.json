@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "445047431341",
+    "project_id": "hamburgerdelivery-9d99f",
+    "storage_bucket": "hamburgerdelivery-9d99f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445047431341:android:700c7a543ade233e03e624",
+        "android_client_info": {
+          "package_name": "com.project.hamburgerdelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445047431341-r0ps9sg0qe5di5pg93i3are00cbuvjnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFGsJPPHRZBZmKsfuaUaZVsBPWl9edScw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445047431341-r0ps9sg0qe5di5pg93i3are00cbuvjnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
