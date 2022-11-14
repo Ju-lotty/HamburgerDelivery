@@ -21,6 +21,8 @@ class Home : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewFlipper()
+        deliveryButton()
+        forHereButton()
         alarmButton()
         menuButton()
         locationButton()
@@ -38,6 +40,20 @@ class Home : Fragment() {
         viewFlipper.flipInterval = 4000
         viewFlipper.setInAnimation(activity?.applicationContext, android.R.anim.fade_in)
         viewFlipper.setOutAnimation(activity?.applicationContext, android.R.anim.fade_out)
+    }
+
+    private fun deliveryButton() = with(binding) {
+        val delivery = Delivery()
+        deliveryButton.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, delivery).commit()
+        }
+    }
+
+    private fun forHereButton() = with(binding) {
+        val storeEat = StoreEat()
+        forHereButton.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container, storeEat).commit()
+        }
     }
 
     private fun menuButton() = with(binding){

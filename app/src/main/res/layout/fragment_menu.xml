@@ -15,6 +15,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:background="#00000000"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toTopOf="@id/tabLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        tools:ignore="ContentDescription" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,50 +42,33 @@
         app:layout_constraintTop_toTopOf="@id/backButton"
         tools:ignore="HardcodedText" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/hamburgerButton"
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="#00000000"
-        android:text="Hamburger"
-        android:textAllCaps="false"
-        android:textColor="#FFFF00"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/sideButton"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/backButton"
-        tools:ignore="HardcodedText" />
+        app:tabSelectedTextColor="#FFFF00"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorColor="#FFFF00"
+        app:tabTextAppearance="@style/MyCustomTextAppearance"
+        app:tabTextColor="#EFEFF1">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/sideButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00000000"
-        android:text="Side"
-        android:textAllCaps="false"
-        android:textColor="#898B8A"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/hamburgerButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/hamburgerButton"
-        app:layout_constraintTop_toTopOf="@id/hamburgerButton"
-        tools:ignore="HardcodedText" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hamburger"
+            tools:ignore="HardcodedText" />
 
-    <ImageButton
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:background="#00000000"
-        android:src="@drawable/ic_back"
-        app:layout_constraintBottom_toTopOf="@id/hamburgerButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/topView"
-        tools:ignore="ContentDescription" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Side"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.tabs.TabLayout>
 
     <View
         android:id="@+id/bottomView"
